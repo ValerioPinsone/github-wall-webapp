@@ -1,6 +1,14 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
-
-module.exports = nextConfig
+//js
+module.exports = () => {
+  const rewrites = () => {
+    return [
+      {
+        source: "/api/:path*",
+        destination: "https://skyline.github.com/:path*",
+      },
+    ];
+  };
+  return {
+    rewrites,
+  };
+};
