@@ -2,16 +2,23 @@ import React, { useEffect, useState } from 'react';
 import GridColumn, { GridColumnProps } from './GridColumn';
 import GridStyle from '../styles/Grid.module.css';
 
-function Grid() {
+
+export interface GridProps {
+    username: string;
+    year: string;
+}
+function Grid({ username, year }: GridProps) {
   const [contributions, setContributions] = useState<GridColumnProps[]>([]);
+
 
   useEffect(() => {
     fetchGrid();
-  }, []);
+  }, [username, year]);
 
   async function fetchGrid() {
     try {
-      const response = await fetch('/api/valeriopinsone/2023.json');
+        setContributions([]);
+      const response = await fetch(`/api/${username}/${year}.json`);
       const data = await response.json();
       setContributions(data.contributions);
     } catch (error) {
@@ -20,11 +27,18 @@ function Grid() {
   }
 
   return (
-    <div className={GridStyle.grid}>
-      {contributions.map((contribution, index) => (
-        <GridColumn key={index} week={contribution.week} days={contribution.days} />
-      ))}
-    </div>
+    <>
+     
+      <div className={GridStyle.grid}>
+        {contributions ? (
+          contributions.map((contribution, index) => (
+            <GridColumn key={index} week={contribution.week} days={contribution.days} />
+          ))
+        ) : (
+          <p>Nessun dato disponibile</p>
+        )}
+      </div>
+    </>
   );
 }
 

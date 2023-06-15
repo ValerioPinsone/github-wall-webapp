@@ -7,9 +7,9 @@
     float: left;
 
 }
+
 .lvl4{
     background-color: rgb(98, 255, 0);
-    
 }
 .lvl3{
     background-color: rgba(98, 255, 0, 0.75);
@@ -18,10 +18,10 @@
     background-color: rgba(98, 255, 0, 0.5);
 }
 .lvl1{
-    background-color: rgba(98, 255, 0, 0.25);
+    background-color: rgba(98, 255, 0, 0.25);    
 }
 .lvl0{
-    background-color: rgb(56, 56, 56);
+    background-color: rgba(56, 56, 56, 0.537);
 }
 
 .gridColumn{
@@ -37,6 +37,7 @@
     padding:2px;
     margin: 0 auto;
     
+    /* border: 1px solid rgba(255, 255, 255, 0.089); */
     
     border-radius: 5px;
     overflow: hidden;

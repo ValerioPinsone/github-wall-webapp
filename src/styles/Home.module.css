@@ -8,3 +8,53 @@
   height: 100%;
   color: white;
 }
+
+.userInput{
+  padding:10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+
+ 
+}
+
+.yearInput{
+  padding:10px;
+  border-radius: 5px;
+  font-size: 18px;
+  border: none;
+  width: 100px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.inputBox{
+  top: 60px;
+  width: 1178px;
+  text-align: center;
+  padding:2px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+.refreshButton{
+  padding:10px;
+  border-radius: 5px;
+  font-size: 18px;
+  border: none;
+  width: 100px;
+  background-color: rgb(38, 159, 38);
+  color: white;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: all 0.8s ease;
+}
+
+.refreshButton:hover{
+  background-color: rgb(38, 159, 38, 0.75);
+}
+
+.refreshButton:active{
+  transition: all 0.1s ease;
+  background-color: rgb(38, 159, 38, 0.5);
+}
