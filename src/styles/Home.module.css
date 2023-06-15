@@ -1,4 +1,10 @@
+.body{
+  background-color: #181b1e;
+  color: white;
+}
 .main{
-  background-color: black;
+  margin-top: 100px;
+  background-color: #181b1e;
+  height: 100%;
   color: white;
 }
